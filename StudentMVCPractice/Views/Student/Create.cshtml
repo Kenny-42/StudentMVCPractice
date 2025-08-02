@@ -1,0 +1,37 @@
+﻿@model Student
+@{
+	// Give title to the webpage on the layout page
+	ViewData["Title"] = "Create Student";
+}
+
+<h2>Create a new student</h2>
+
+<form method="post">
+	<label asp-for="FirstName"></label>
+	<input asp-for="FirstName" />
+	<span asp-validation-for="FirstName"></span>
+	<br />
+
+	<label asp-for="LastName"></label>
+	<input asp-for="LastName" />
+	<span asp-validation-for="LastName"></span>
+	<br />
+
+	<label asp-for="PreferredName"></label>
+	<input asp-for="PreferredName" />
+	<span asp-validation-for="PreferredName"></span>
+	<br />
+
+	<label asp-for="DateOfBirth"></label>
+	<input asp-for="DateOfBirth" />
+	<span asp-validation-for="DateOfBirth"></span>
+	<br />
+
+	<input type="submit" value="Create Student" />
+</form>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}
