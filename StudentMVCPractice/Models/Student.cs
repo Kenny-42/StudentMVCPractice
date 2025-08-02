@@ -1,4 +1,6 @@
-﻿namespace StudentMVCPractice.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace StudentMVCPractice.Models;
 
 /// <summary>
 /// Reperesents a student at a school.
@@ -21,10 +23,12 @@ public class Student
     public required string LastName { get; set; }
 
     /// <summary>
-    /// The name the student prefers to be called. This is
-    /// optional to fill out and can be left empty.
+    /// The name the student prefers to be called. This should
+    /// be optional to fill out and can be left empty, however,
+    /// I couldn't figure out how to do this so an issue has been 
+    /// created in GitHub to fix this later.
     /// </summary>
-    public string PreferredName { get; set; } = string.Empty;
+    public required string PreferredName { get; set; } = string.Empty;
 
     /// <summary>
     /// The student's date of birth.
